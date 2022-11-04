@@ -1,0 +1,20 @@
+{%extends 'theme.html.'%}
+{%block content%}
+<div class="container">
+    <div class="row">
+        {%for shop in items%}
+        <div class="col-md-3">
+            <div class="card">
+                <img class="card-img-top" src="{{shop.image}}"alt="card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{shop.name}}</h5>
+                    <p class="card-text">${{shop.price}}</p>
+                    <a href="#" class="btn btn-primary">buy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {%endfor%}
+</div>
+</div>
+{%endblock%}
